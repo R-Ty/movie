@@ -8,17 +8,17 @@ import mineRouter from './mine'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes: [
-    movieRouter,
-    cinemaRouter,
-    mineRouter,
-	// 重定向 当输入地址错误的时候自动匹配到Movie
-    {
-		path:'/*',
-		redirect:'/movie'
-	}
-   
-  ]
+	mode: 'history',
+	base: process.env.BASE_URL,
+	routes: [
+		movieRouter,
+		cinemaRouter,
+		mineRouter,
+		// 重定向 当输入地址错误的时候自动匹配到Movie
+		{
+			path: '/*',
+			redirect: '/movie'
+		}
+
+	]
 })
